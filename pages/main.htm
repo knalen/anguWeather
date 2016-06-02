@@ -1,0 +1,33 @@
+<form ng-submit="getLocation()">
+    <input class="wInput" type="text" ng-model="city" placeholder="Enter your city and press enter"> 
+    <input type="submit" value="Get Weather" />
+</form>        
+
+        
+<h2> Current Weather in... </h2>
+<h2>{{ city }}</h2>
+
+<div class="currentWeather">
+    <h4 class="todayDate">{{ convertToDate(myData.data.dt) | date: 'd MMM, y' }}</h4>
+    <h4 class="errorMessage">{{ myData.data.message }}</h4>
+    <div class="wTemperature">
+        {{ convertToCelsius(myData.data.main.temp) }}
+    </div>
+    
+    <div class="wDescription">
+        {{ myData.data.weather[0].description.toUpperCase() }}
+    </div>
+    
+    <div class="wWind">
+        {{ convertToKPH(myData.data.wind.speed) }}
+    </div>
+    
+    
+</div>
+
+<div class="searches">
+    <h3>Recent Searches</h3>
+    <p>{{ searches }}</p>
+</div>
+
+<a href="#/forecast" ng-submit="getLocation()">5 Day Forecast for {{ city }}</a> 

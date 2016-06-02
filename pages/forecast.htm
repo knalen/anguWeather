@@ -1,0 +1,21 @@
+<a href="#/">Back</a>
+
+<table>
+    <tr>
+        <td class="tableB">Date</td>
+        <td class="tableA" id="weatherDate" ng-repeat="w in weatherResult.list">{{ convertToDate(w.dt) | date: 'd, MMM'  }}</td>
+    </tr>
+    <tr>
+        <td class="tableB">MAX</td>
+        <td class="tableA" ng-repeat="w in weatherResult.list">{{ convertToCelsius(w.temp.max) }}</td>
+    </tr>
+    <tr>
+        <td class="tableB">MIN</td>
+        <td class="tableA" ng-repeat="w in weatherResult.list">{{ convertToCelsius(w.temp.min) }}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="tableA" ng-repeat="w in weatherResult.list">{{ w.weather[0].description }}</td>
+    </tr>
+
+</table>

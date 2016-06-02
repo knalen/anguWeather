@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="anguWeather">
+
+<head>
+    <title>AnguWeather</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alen Knejev">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="AngularJS, Javascript, Weather, API">
+    <meta name="description" content="Small Weather App with AngularJS">
+    
+    <!-- Load custom CSS Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Get GoogleFonts: "Raleway" -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap and Fontawesome via CDN -->
+    <link rel="stylesheet" href="https://dfsdfsdmaxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <!-- AngularJS via CDN -->
+    <script src="https://code.angularjs.org/1.5.6/angular.min.js"></script>
+    <!-- Including dependencies -->
+    <script src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.6/angular-resource.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.6/angular-cookies.min.js"></script>
+    <!-- Including JS files here -->
+    <script src="app.js"></script>
+    <script src="routes.js"></script>
+    <script src="services.js"></script>
+    <script src="controllers.js"></script>
+</head>
+    
+<body>
+<div class="container">
+    
+    <div class="logo">
+        <a href="#/"><h1 class="title">AnguWeather</h1></a>    
+    </div>
+    
+    <div id="clouds">
+        <div class="cloud nr1"></div>
+        <div class="cloud nr2"></div>
+        <div class="cloud nr3"></div>
+    </div>
+    
+    <div class="content">
+        <div class="ng-view"></div> 
+    </div>
+    
+</div>
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+    
+</body>   
+</html>
